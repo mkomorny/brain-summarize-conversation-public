@@ -1,0 +1,43 @@
+HOW TO USE: brain-summarize-conversation
+=========================================
+
+PURPOSE
+  Condense your active conversation into a structured, high-density executive
+  brief and save it directly into your Second Brain for easy future recall.
+
+CAPABILITIES
+  - Reviews entire chat history from beginning to end
+  - Formats a 4-part brief: Objective, Accomplishments, Decisions Locked, Next Steps
+  - Extracts key technical choices, rules, and trade-offs without conversational filler
+  - Automatically tags with #summary, #brief, #decision, and topic tags
+  - Direct command execution carries automatic write permission (no secondary confirmation turn)
+  - Saves directly to personal Second Brain MCP server via `remember`
+  - Returns confirmed entry ID and executive brief
+
+USE CASES
+  - "Summarize this conversation and save it to my second brain"
+  - Creating a clean, high-signal project milestone note at the end of a session
+  - Preserving decisions and outcomes so tomorrow's session can recall them instantly
+
+IDEAS
+  - Run `/brain-summarize-conversation` when you reach a natural stopping point in any chat
+  - Future sessions can search for this brief with `/brain-recall <topic> --tag summary`
+
+PROMPTS YOU CAN PASTE
+  /brain-summarize-conversation
+
+  /brain-summarize-conversation #live-actions
+
+EXAMPLE FLOW
+  You:   /brain-summarize-conversation
+  Agent: [Extracts brief from conversation history, calls remember tool]
+         ✅ Conversation Brief Saved to Second Brain
+         - ID: 9a41b2-11ef-...
+         - Tags: #summary, #brief, #second-brain, #decision
+         - Volatility: !durable
+         [Renders 4-part executive brief]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Synthesize 4-part executive brief (Objective, Accomplishments, Decisions, Next Steps)
+  2. Call remember MCP tool immediately with #summary and #brief tags
+  3. Report confirmed memory ID and brief in chat
